@@ -1,2 +1,3 @@
-# Persoante Docs
+# Personate Docs
 
+Personate Developer Docs
