@@ -1,25 +1,25 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation Starter Kit",
+  "name": "Personate Developers Docs",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0069ED",
-    "light": "#4D9CFF",
-    "dark": "#0050B4"
+    "primary": "#983ef6",
+    "light": "#983ef6",
+    "dark": "#983ef6"
   },
   "topbarLinks": [
     {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
+      "name": "Website",
+      "url": "https://personate.ai"
     }
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "url": "https://app.personate.ai"
   },
   "anchors": [
     {
@@ -28,14 +28,14 @@
       "url": "api-reference"
     },
     {
-      "name": "Changelog",
+      "name": "Blogs",
       "icon": "list",
-      "url": "https://mintlify.com"
+      "url": "https://blog.personate.ai/"
     },
     {
       "name": "Community",
       "icon": "discord",
-      "url": "https://mintlify.com/community"
+      "url": "https://discord.gg/tNWTMTaY"
     }
   ],
   "navigation": [
@@ -48,18 +48,16 @@
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": [
         "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/create"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://x.com/personate_ai",
+    "instagram": "https://www.instagram.com/personate_ai/",
+    "linkedin": "https://www.linkedin.com/company/74974624/"
   }
 }

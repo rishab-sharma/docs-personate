@@ -1,22 +1,24 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "Overview of Personate Enterprise API"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+To interact with Personate.ai's Enterprise API, secure authentication is essential to ensure that only authorized users can access. Personate.ai employs API key-based authentication, a widely adopted method for verifying client identity in API communications.
 
 ```bash
-'Authorization': 'Token <team_token>'
+'Authorization': 'Bearer <YOUR_API_KEY>'
 ```
 
-## API Tokens
+## API Key
 
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
+To get your Enterprise API-KEY, please contact rishab@personate.ai / hello@personate.ai
 
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
+## Security Best Practices
 
-### Permissions
+Keep Your API Key Confidential: Treat your API key like a password. Do not share it publicly or include it in client-side code.
 
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
+Regenerate Compromised Keys: If you suspect that your API key has been compromised, regenerate it immediately through the Personate.ai dashboard.
 
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
+Use HTTPS: Always make API requests over HTTPS to encrypt the data transmitted between your client and the server.
+
+For more detailed information and advanced configuration options, please refer to the documentation.
