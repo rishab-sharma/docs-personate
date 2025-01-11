@@ -32,7 +32,7 @@ description: "This endpoint get a express lipsync video"
 
 ```bash Bash
 curl --location 'https://pulse.personate.ai/api/express_lipsync_video/{job_id}' \
---header 'Authorization: '••••••'
+--header 'Authorization: 'Bearer ********'
 ```
 
 ```python Python
@@ -42,7 +42,7 @@ url = "https://pulse.personate.ai/api/express_lipsync_video/{job_id}"
 
 payload = {}
 headers = {
-  'Authorization': '••••••'
+  'Authorization': 'Bearer ********'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)

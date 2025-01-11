@@ -55,7 +55,7 @@ description: "This endpoint creates a express lipsync video"
 ```bash Bash
 curl --location 'https://pulse.personate.ai/api/express_lipsync_video' \
 --header 'Content-Type: application/json' \
---header 'Authorization: ••••••' \
+--header 'Authorization': 'Bearer ********' \
 --data '{
   "video_url": "https://URL.mp4",
   "script": {
@@ -84,7 +84,7 @@ payload = json.dumps({
 })
 headers = {
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer p8_mkmci7yhiunbfiunw212jknd80'
+  'Authorization': 'Bearer ********'
 }
 
 response = requests.request("POST", url, headers=headers, data=payload)
