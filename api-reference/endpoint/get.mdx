@@ -1,44 +1,54 @@
 ---
 title: "Get lipsync video"
-api: "GET https://pulse.personate.ai/api/express_lipsync_video/{id}"
+api: "GET https://pulse.personate.ai/api/express_lipsync_video/{job_id}"
 description: "This endpoint get a express lipsync video"
 ---
 
 ### Body
 
-<ResponseField name="id" type="string" required="true">
+<ResponseField name="job_id" type="string" required="true">
   Video generation job id
 </ResponseField>
 
 ### Response
 
-<ResponseField name="ouput" type="string">
-  Video generation link
+<ResponseField name="job_id" type="string">
+  Video generation job id
+</ResponseField>
+
+<ResponseField name="input" type="object">
+  Your given input fields
 </ResponseField>
 
 <ResponseField name="status" type="string">
   Video generation status
 </ResponseField>
 
+<ResponseField name="output" type="string">
+  Video generation output
+</ResponseField>
+
 <RequestExample>
 
 ```bash Bash
-curl --location --request GET 'https://pulse.personate.ai/api/express_lipsync_video/{id}' \
---header 'Authorization: Token <token>'
+curl --location 'https://pulse.personate.ai/api/express_lipsync_video/{job_id}' \
+--header 'Authorization: '••••••'
 ```
 
 ```python Python
 import requests
 
-url = "https://pulse.personate.ai/api/express_lipsync_video/{id}"
+url = "https://pulse.personate.ai/api/express_lipsync_video/{job_id}"
 
+payload = {}
 headers = {
-    "Authorization": "Bearer <api-key>"
+  'Authorization': '••••••'
 }
 
-response = requests.request("GET", url, headers=headers)
+response = requests.request("GET", url, headers=headers, data=payload)
 
 print(response.text)
+
 ```
 
 </RequestExample>
@@ -47,8 +57,10 @@ print(response.text)
 
 ```json Response
 {
-  "ouput": "",
-  "status": ""
+  "input": {},
+  "job_id": "job_id",
+  "status": "rendering",
+  "output": ""
 }
 ```
 

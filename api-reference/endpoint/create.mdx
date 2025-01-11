@@ -10,13 +10,13 @@ description: "This endpoint creates a express lipsync video"
   Video URL to lipsync
 </ResponseField>
 
-<ResponseField name="audio_url" type="string">
-  Audio URL to lipsync
-</ResponseField>
-
 <ResponseField name="script" type="object">  
   <Expandable title="Toggle script child">
     
+    <ResponseField name="use" type="string" required=true>
+      Choose between "text" / "audio"
+    </ResponseField>
+
     <ResponseField name="text" type="string">
       Text to speak
     </ResponseField>
@@ -24,51 +24,70 @@ description: "This endpoint creates a express lipsync video"
     <ResponseField name="voice_id" type="string">
       Voice ID
     </ResponseField>
+
+    <ResponseField name="audio_url" type="string">
+      Audio URL to lipsync
+    </ResponseField>
   
   </Expandable>
 </ResponseField>
 
 ### Response
 
-<ResponseField name="id" type="string">
+<ResponseField name="job_id" type="string">
   Video generation job id
+</ResponseField>
+
+<ResponseField name="input" type="object">
+  Your given input fields
+</ResponseField>
+
+<ResponseField name="status" type="string">
+  Video generation status
+</ResponseField>
+
+<ResponseField name="output" type="string">
+  Video generation output
 </ResponseField>
 
 <RequestExample>
 
 ```bash Bash
-curl --location --request POST 'https://pulse.personate.ai/api/express_lipsync_video' \
+curl --location 'https://pulse.personate.ai/api/express_lipsync_video' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
+--header 'Authorization: ••••••' \
 --data '{
-    "video_url": "",
-    "audio_url": "",
-    "script": {
-      "text": "",
-      "voice_id": ""
-    }
+  "video_url": "https://URL.mp4",
+  "script": {
+    "use": "audio",
+    "text": "string",
+    "audio_url": "https://URL.mp3",
+    "voice_id": "string"
+  }
 }'
 ```
 
 ```python Python
 import requests
+import json
 
 url = "https://pulse.personate.ai/api/express_lipsync_video"
 
-payload = {
-    "video_url": "",
-    "audio_url": "",
-    "script": {
-      "text": "",
-      "voice_id": ""
-    }
-}
+payload = json.dumps({
+  "video_url": "https://URL.mp4",
+  "script": {
+    "use": "audio",
+    "text": "string",
+    "audio_url": "https://URL.mp3",
+    "voice_id": "string"
+  }
+})
 headers = {
-    "Authorization": "Bearer <api-key>",
-    "Content-Type": "application/json"
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer p8_mkmci7yhiunbfiunw212jknd80'
 }
 
-response = requests.request("POST", url, json=payload, headers=headers)
+response = requests.request("POST", url, headers=headers, data=payload)
 
 print(response.text)
 ```
@@ -79,7 +98,10 @@ print(response.text)
 
 ```json Response
 {
-  "id": "qwe13c414313edc3q"
+  "input": {},
+  "job_id": "job_id",
+  "status": "rendering",
+  "output": ""
 }
 ```
 
