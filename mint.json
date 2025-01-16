@@ -51,7 +51,8 @@
       "group": "Endpoints",
       "pages": [        
         "api-reference/endpoint/create",
-        "api-reference/endpoint/get"
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create_voice"
       ]
     }
   ],

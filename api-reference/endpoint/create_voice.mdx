@@ -1,0 +1,77 @@
+---
+title: "Clone voice"
+api: "POST https://pulse.personate.ai/api/clone_voice"
+description: "This endpoint clones a voice"
+---
+
+### Body
+
+<ResponseField name="audio_url" type="string" required="true">
+  Audio URL to clone, minimum 1 minute in duration
+</ResponseField>
+
+<ResponseField name="voice_name" type="string" required="true">
+  Name of the voice clone
+</ResponseField>
+
+<ResponseField name="tag" type="string">
+  Tag of the voice clone
+</ResponseField>
+
+
+### Response
+
+<ResponseField name="voice_id" type="string">
+  Voice id
+</ResponseField>
+
+<ResponseField name="voice_name" type="object">
+  Voice name
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://pulse.personate.ai/api/clone_voice' \
+--header 'Content-Type: application/json' \
+--header 'Authorization': 'Bearer ********' \
+--data '{
+  "audio_url": "https://URL.wav",
+  "voice_name": "",
+  "tag": ""
+}'
+```
+
+```python Python
+import requests
+import json
+
+url = "https://pulse.personate.ai/api/clone_voice"
+
+payload = json.dumps({
+  "audio_url": "https://URL.wav",
+  "voice_name": "",
+  "tag": ""
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "voice_id": "",
+  "voice_name": ""
+}
+```
+
+</ResponseExample>
