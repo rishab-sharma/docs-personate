@@ -52,7 +52,8 @@
       "pages": [        
         "api-reference/endpoint/create",
         "api-reference/endpoint/get",
-        "api-reference/endpoint/create_voice"
+        "api-reference/endpoint/create_voice",
+        "api-reference/endpoint/get_voices"
       ]
     }
   ],

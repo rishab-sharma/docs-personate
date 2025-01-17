@@ -1,0 +1,46 @@
+---
+title: "Get all cloned voices"
+api: "GET https://pulse.personate.ai/api/cloned_voices"
+description: "This endpoint gets all the cloned voices"
+---
+
+### Response
+
+<ResponseField name="voices" type="list">
+  List of all cloned voices
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://pulse.personate.ai/api/cloned_voices' \
+--header 'Authorization: 'Bearer ********'
+```
+
+```python Python
+import requests
+
+url = "https://pulse.personate.ai/api/cloned_voices"
+
+payload = {}
+headers = {
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "voices": []
+}
+```
+
+</ResponseExample>
