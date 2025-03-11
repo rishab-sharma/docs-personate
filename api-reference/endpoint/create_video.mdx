@@ -1,0 +1,103 @@
+---
+title: "Create lipsync video"
+api: "POST https://pulse.personate.ai/api/template_dynamic_slide_video"
+description: "This endpoint creates a studio video"
+---
+
+### Body
+
+<ResponseField name="template_id" type="string" required="true">
+  Template ID
+</ResponseField>
+
+<ResponseField name="slides_count" type="string" required="true">
+  Slides Count
+</ResponseField>
+
+<ResponseField name="customizations" type="list">  
+  <Expandable title="Toggle script child">
+    
+    <ResponseField name="layer_id" type="string" required="true">
+      Layer Id
+    </ResponseField>
+
+    <ResponseField name="layer_type" type="string">
+      Layer Type
+    </ResponseField>
+    
+    <ResponseField name="inputs" type="list">
+      Inputs
+    </ResponseField>
+  
+  </Expandable>
+</ResponseField>
+
+### Response
+
+<ResponseField name="job_id" type="string">
+  Video generation job id
+</ResponseField>
+
+<ResponseField name="status" type="string">
+  Video generation status
+</ResponseField>
+
+<ResponseField name="output" type="string">
+  Video generation output
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://pulse.personate.ai/api/template_dynamic_slide_video' \
+--header 'Content-Type: application/json' \
+--header 'Authorization': 'Bearer ********' \
+--data '{
+  "template_id": "string",
+  "slides_count": "integer",
+  "customizations": [
+    "layer_id": "audio",
+    "layer_type": "string",
+    "inputs": []
+  ]
+}'
+```
+
+```python Python
+import requests
+import json
+
+url = "https://pulse.personate.ai/api/template_dynamic_slide_video"
+
+payload = json.dumps({
+  "template_id": "string",
+  "slides_count": "integer",
+  "customizations": [
+    "layer_id": "audio",
+    "layer_type": "string",
+    "inputs": []
+  ]
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "job_id": "job_id",
+  "status": "rendering",
+  "output": ""
+}
+```
+
+</ResponseExample>
