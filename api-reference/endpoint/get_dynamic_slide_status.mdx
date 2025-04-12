@@ -1,0 +1,67 @@
+---
+title: "Get Dynamic slide job status"
+api: "GET https://pulse.personate.ai/api/template_dynamic_slide_video/{job_id}"
+description: "This endpoint get a Dynamic slide job status"
+---
+
+### Body
+
+<ResponseField name="job_id" type="string" required="true">
+  Video generation job id
+</ResponseField>
+
+### Response
+
+<ResponseField name="job_id" type="string">
+  Dynamic slide job id
+</ResponseField>
+
+<ResponseField name="job_type" type="string">
+  Job Type
+</ResponseField>
+
+<ResponseField name="status" type="string">
+  Video generation status
+</ResponseField>
+
+<ResponseField name="output" type="string">
+  Video generation output
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://pulse.personate.ai/api/template_dynamic_slide_video/{job_id}' \
+--header 'Authorization: 'Bearer ********'
+```
+
+```python Python
+import requests
+
+url = "https://pulse.personate.ai/api/template_dynamic_slide_video/{job_id}"
+
+payload = {}
+headers = {
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "job_type": "string",
+  "job_id": "string",
+  "status": "rendering",
+  "output": {}
+}
+```
+
+</ResponseExample>

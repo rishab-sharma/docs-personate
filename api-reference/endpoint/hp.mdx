@@ -1,0 +1,143 @@
+---
+title: "Create HP Job"
+api: "POST https://pulse.personate.ai/api/hp_job"
+description: "This endpoint creates a HP job"
+---
+
+### Body
+
+<ResponseField name="project_name" type="string" required="true">
+  project_name
+</ResponseField>
+
+<ResponseField name="base_video_url" type="string" required="true">
+  base_video_url
+</ResponseField>
+
+<ResponseField name="variable_count" type="integer" required="true">
+  variable_count
+</ResponseField>
+
+<ResponseField name="data_slice_start_index" type="integer" required="true">
+  data_slice_start_index
+</ResponseField>
+
+<ResponseField name="data_slice_end_index" type="integer" required="true">
+  data_slice_end_index
+</ResponseField>
+
+<ResponseField name="data_xlsx_url" type="integer" required="true">
+  data_xlsx_url
+</ResponseField>
+
+<ResponseField name="music" type="boolean" required="true">
+  music
+</ResponseField>
+
+<ResponseField name="variables" type="list">  
+  <Expandable title="Toggle script child">
+    
+    <ResponseField name="start_time" type="string" required="true">
+      start_time
+    </ResponseField>
+
+    <ResponseField name="end_time" type="string" required="true">
+      end_time
+    </ResponseField>
+    
+    <ResponseField name="variable_pre_text" type="string">
+      variable_pre_text
+    </ResponseField>
+
+    <ResponseField name="variable_post_text" type="string">
+      variable_post_text
+    </ResponseField>
+  
+  </Expandable>
+</ResponseField>
+
+### Response
+
+<ResponseField name="job_id" type="string">
+  Video generation job id
+</ResponseField>
+
+<ResponseField name="status" type="string">
+  Video generation status
+</ResponseField>
+
+<ResponseField name="data_json" type="string">
+  Input data JSON
+</ResponseField>
+
+<ResponseField name="project_name" type="string">
+  Project name
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://pulse.personate.ai/api/hp_job' \
+--header 'Content-Type: application/json' \
+--header 'Authorization': 'Bearer ********' \
+--data '{
+  "project_name": "string",
+  "base_video_url": "string",
+  "variable_count": "integer",
+  "data_slice_start_index": "integer",
+  "data_slice_end_index": "integer",
+  "data_xlsx_url": "string",
+  "music": "boolean",
+  "customizations": [
+    "start_time": "integer",
+    "end_time": "integer",
+    "variable_pre_text": "string",
+    "variable_post_text": "string"
+  ]
+}'
+```
+
+```python Python
+import requests
+import json
+
+url = "https://pulse.personate.ai/api/hp_job"
+
+payload = json.dumps({
+  "project_name": "string",
+  "base_video_url": "string",
+  "variable_count": "integer",
+  "data_slice_start_index": "integer",
+  "data_slice_end_index": "integer",
+  "data_xlsx_url": "string",
+  "music": "boolean",
+  "customizations": [
+    "start_time": "integer",
+    "end_time": "integer",
+    "variable_pre_text": "string",
+    "variable_post_text": "string"
+  ]
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "job_id": "job_id",
+  "status": "rendering",
+  "output": ""
+}
+```
+
+</ResponseExample>
