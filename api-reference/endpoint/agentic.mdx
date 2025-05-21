@@ -1,6 +1,6 @@
 ---
 title: "Create agentic video Job"
-api: "POST https://pulse.personate.ai/api/agentic_job"
+api: "POST https://raijin.personate.ai/api/agentic_job"
 description: "This endpoint creates a Agentic Video job"
 ---
 
@@ -57,7 +57,7 @@ description: "This endpoint creates a Agentic Video job"
 <RequestExample>
 
 ```bash Bash
-curl --location 'https://pulse.personate.ai/api/agentic_job' \
+curl --location 'https://raijin.personate.ai/api/agentic_job' \
 --header 'Content-Type: application/json' \
 --header 'Authorization': 'Bearer ********' \
 --data '{
@@ -76,7 +76,7 @@ curl --location 'https://pulse.personate.ai/api/agentic_job' \
 import requests
 import json
 
-url = "https://pulse.personate.ai/api/agentic_job"
+url = "https://raijin.personate.ai/api/agentic_job"
 
 payload = json.dumps({
   "video_name": "string",

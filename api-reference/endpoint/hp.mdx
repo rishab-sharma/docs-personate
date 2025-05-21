@@ -1,6 +1,6 @@
 ---
 title: "Create HP Job"
-api: "POST https://pulse.personate.ai/api/hp_job"
+api: "POST https://raijin.personate.ai/api/hp_job"
 description: "This endpoint creates a HP job"
 ---
 
@@ -77,7 +77,7 @@ description: "This endpoint creates a HP job"
 <RequestExample>
 
 ```bash Bash
-curl --location 'https://pulse.personate.ai/api/hp_job' \
+curl --location 'https://raijin.personate.ai/api/hp_job' \
 --header 'Content-Type: application/json' \
 --header 'Authorization': 'Bearer ********' \
 --data '{
@@ -101,7 +101,7 @@ curl --location 'https://pulse.personate.ai/api/hp_job' \
 import requests
 import json
 
-url = "https://pulse.personate.ai/api/hp_job"
+url = "https://raijin.personate.ai/api/hp_job"
 
 payload = json.dumps({
   "project_name": "string",
