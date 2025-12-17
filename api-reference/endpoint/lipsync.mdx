@@ -54,11 +54,10 @@ curl --location 'https://raijin.personate.ai/api/express_lipsync_video' \
 --header 'Authorization': 'Bearer ********' \
 --data '{
   "video_url": "https://URL.mp4",
+  "model": "v2",
   "script": {
     "use": "audio",
-    "text": "string",
-    "audio_url": "https://URL.mp3",
-    "voice_id": "string"
+    "audio_url": "https://URL.mp3"
   }
 }'
 ```
@@ -71,11 +70,10 @@ url = "https://raijin.personate.ai/api/express_lipsync_video"
 
 payload = json.dumps({
   "video_url": "https://URL.mp4",
+  "model": "v2",
   "script": {
     "use": "audio",
-    "text": "string",
-    "audio_url": "https://URL.mp3",
-    "voice_id": "string"
+    "audio_url": "https://URL.mp3"
   }
 })
 headers = {
