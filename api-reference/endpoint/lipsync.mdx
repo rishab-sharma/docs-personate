@@ -10,19 +10,15 @@ description: "This endpoint creates a express lipsync video"
   Video URL to lipsync
 </ResponseField>
 
+<ResponseField name="model" type="string" required="true">
+  Value options: "v1" / "v2"
+</ResponseField>
+
 <ResponseField name="script" type="object">  
   <Expandable title="Toggle script child">
     
     <ResponseField name="use" type="string" required="true">
-      Choose between "text" / "audio"
-    </ResponseField>
-
-    <ResponseField name="text" type="string">
-      Text to speak
-    </ResponseField>
-    
-    <ResponseField name="voice_id" type="string">
-      Voice ID
+      Value: "audio"
     </ResponseField>
 
     <ResponseField name="audio_url" type="string">
