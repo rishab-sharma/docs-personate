@@ -53,7 +53,7 @@
         "api-reference/endpoint/lipsync",
         "api-reference/endpoint/get_lipsync_status",
         "api-reference/endpoint/get_voices",
-        "api-reference/endpoint/get_voices_cutom",
+        "api-reference/endpoint/get_voices_custom",
         "api-reference/endpoint/dynamic_slide",
         "api-reference/endpoint/get_dynamic_slide_status",
         "api-reference/endpoint/hp",
