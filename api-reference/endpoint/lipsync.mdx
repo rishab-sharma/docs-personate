@@ -83,7 +83,11 @@ curl --location 'https://raijin.personate.ai/api/express_lipsync_video' \
 --header 'Content-Type: application/json' \
 --header 'Authorization': 'Bearer ********' \
 --data '{
-  "video_url": "https://URL.mp4",
+  "actor": {
+    "use": "avatar",
+    "avatar_id": "5b05e9ad-a2e5-4583-8a0d-e44ee1492855",
+    "avatar_type": "public"
+  },
   "model": "v2",
   "script": {
     "use": "audio / text",
@@ -99,7 +103,11 @@ import json
 url = "https://raijin.personate.ai/api/express_lipsync_video"
 
 payload = json.dumps({
-  "video_url": "https://URL.mp4",
+  "actor": {
+    "use": "avatar",
+    "avatar_id": "5b05e9ad-a2e5-4583-8a0d-e44ee1492855",
+    "avatar_type": "public"
+  },
   "model": "v2",
   "script": {
     "use": "audio",
