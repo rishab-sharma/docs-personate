@@ -18,11 +18,23 @@ description: "This endpoint creates a express lipsync video"
   <Expandable title="Toggle script child">
     
     <ResponseField name="use" type="string" required="true">
-      Value: "audio"
+      Value: "audio" / "text"
     </ResponseField>
 
     <ResponseField name="audio_url" type="string">
       Audio URL to lipsync
+    </ResponseField>
+
+    <ResponseField name="text" type="string">
+      Audio text
+    </ResponseField>
+
+    <ResponseField name="voice_id" type="string">
+      Audio voice_id you get from endpoint /api/voices/public or /api/voices/custom
+    </ResponseField>
+
+    <ResponseField name="voice_type" type="string">
+      Audio voice type: "public" / "custom"
     </ResponseField>
   
   </Expandable>
@@ -56,7 +68,7 @@ curl --location 'https://raijin.personate.ai/api/express_lipsync_video' \
   "video_url": "https://URL.mp4",
   "model": "v2",
   "script": {
-    "use": "audio",
+    "use": "audio / text",
     "audio_url": "https://URL.mp3"
   }
 }'

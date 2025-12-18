@@ -1,26 +1,26 @@
 ---
-title: "Get all public voices"
-api: "GET https://raijin.personate.ai/api/voices/public"
-description: "This endpoint gets all the public voices"
+title: "Get all custom voices"
+api: "GET https://raijin.personate.ai/api/voices/custom"
+description: "This endpoint gets all the custom voices"
 ---
 
 ### Response
 
 <ResponseField name="voices" type="list">
-  List of all public voices
+  List of all custom voices
 </ResponseField>
 
 <RequestExample>
 
 ```bash Bash
-curl --location 'https://raijin.personate.ai/api/voices/public' \
+curl --location 'https://raijin.personate.ai/api/voices/custom' \
 --header 'Authorization: 'Bearer ********'
 ```
 
 ```python Python
 import requests
 
-url = "https://raijin.personate.ai/api/voices/public"
+url = "https://raijin.personate.ai/api/voices/custom"
 
 payload = {}
 headers = {

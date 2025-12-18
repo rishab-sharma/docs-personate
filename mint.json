@@ -54,12 +54,11 @@
         "api-reference/endpoint/get_lipsync_status",
         "api-reference/endpoint/clone_voice",
         "api-reference/endpoint/get_voices",
+        "api-reference/endpoint/get_voices_cutom",
         "api-reference/endpoint/dynamic_slide",
         "api-reference/endpoint/get_dynamic_slide_status",
         "api-reference/endpoint/hp",
-        "api-reference/endpoint/get_hp_status",
-        "api-reference/endpoint/agentic",
-        "api-reference/endpoint/get_agentic_status"
+        "api-reference/endpoint/get_hp_status"
       ]
     }
   ],
