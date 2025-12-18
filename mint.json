@@ -52,7 +52,6 @@
       "pages": [        
         "api-reference/endpoint/lipsync",
         "api-reference/endpoint/get_lipsync_status",
-        "api-reference/endpoint/clone_voice",
         "api-reference/endpoint/get_voices",
         "api-reference/endpoint/get_voices_cutom",
         "api-reference/endpoint/dynamic_slide",
