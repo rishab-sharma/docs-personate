@@ -6,12 +6,30 @@ description: "This endpoint creates a express lipsync video"
 
 ### Body
 
-<ResponseField name="video_url" type="string" required="true">
-  Video URL to lipsync
-</ResponseField>
-
 <ResponseField name="model" type="string" required="true">
   Value options: "v1" / "v2"
+</ResponseField>
+
+<ResponseField name="actor" type="object">  
+  <Expandable title="Toggle actor child">
+    
+    <ResponseField name="use" type="string" required="true">
+      Value: "avatar" / "video"
+    </ResponseField>
+
+    <ResponseField name="video_url" type="string" required="true">
+      if use "video" then give Video URL to lipsync
+    </ResponseField>
+
+    <ResponseField name="avatar_id" type="string">
+      if use "avatar" then give avatar_id you get from endpoint /api/avatars/public or /api/avatars/custom
+    </ResponseField>
+
+    <ResponseField name="avatar_type" type="string">
+      if use "avatar" then give avatar_type: "public" / "custom"
+    </ResponseField>
+  
+  </Expandable>
 </ResponseField>
 
 <ResponseField name="script" type="object">  
