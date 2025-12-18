@@ -52,8 +52,10 @@
       "pages": [        
         "api-reference/endpoint/lipsync",
         "api-reference/endpoint/get_lipsync_status",
-        "api-reference/endpoint/get_voices",
-        "api-reference/endpoint/get_voices_custom",
+        "api-reference/endpoint/get_public_avatars",
+        "api-reference/endpoint/get_custom_avatars",
+        "api-reference/endpoint/get_public_voices",
+        "api-reference/endpoint/get_custom_voices",
         "api-reference/endpoint/dynamic_slide",
         "api-reference/endpoint/get_dynamic_slide_status",
         "api-reference/endpoint/hp",

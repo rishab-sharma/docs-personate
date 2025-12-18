@@ -1,0 +1,46 @@
+---
+title: "Get all custom avatars"
+api: "GET https://raijin.personate.ai/api/avatars/custom"
+description: "This endpoint gets all the custom avatars"
+---
+
+### Response
+
+<ResponseField name="avatars" type="list">
+  List of all custom avatars
+</ResponseField>
+
+<RequestExample>
+
+```bash Bash
+curl --location 'https://raijin.personate.ai/api/avatars/custom' \
+--header 'Authorization: 'Bearer ********'
+```
+
+```python Python
+import requests
+
+url = "https://raijin.personate.ai/api/avatars/custom"
+
+payload = {}
+headers = {
+  'Authorization': 'Bearer ********'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.text)
+
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "avatars_list": []
+}
+```
+
+</ResponseExample>
